@@ -4,10 +4,31 @@ Notes:
 - Is this a sparce matrix?
 */
 
+
+/**
+ * An immutable Matrix
+ */
 export default class Matrix extends Map {
-  constructor(a, b, c, d, e, f) {
-    if (arguments.length > 0) {
-      super({ a, b, c, d, e, f });
+  /**
+   * Construct a Matrix. Creates an Identiy matrix if no params are supplied.
+   * @param {number} a
+	 * @param {number} b
+	 * @param {number} c
+	 * @param {number} d
+	 * @param {number} e
+	 * @param {number} f
+
+   */
+  constructor(...args) {
+    if (args > 0) {
+      super({
+        a: args[0],
+        b: args[1],
+        c: args[2],
+        d: args[3],
+        e: args[4],
+        f: args[5],
+      });
     } else {
       super({
         a: 1,
@@ -28,6 +49,7 @@ export default class Matrix extends Map {
 	 * @param {number} d2 - scale y
 	 * @param {number} e2 - translate x
 	 * @param {number} f2 - translate y
+   * @return {Matrix}
 	 */
   transform(a2, b2, c2, d2, e2, f2) {
     const a1 = this.get('a');
@@ -52,6 +74,7 @@ export default class Matrix extends Map {
    * If the second param is ommitted it scale uniformly.
 	 * @param {number} sx - scale factor x (1 does nothing)
 	 * @param {number} [sy] - scale factor y (1 does nothing)
+   * @return {Matrix}
 	 */
   scale(...args) {
     const sx = args[0];
