@@ -82,4 +82,14 @@ export default class Matrix extends Map {
     }
     return this.transform(sx, 0, 0, sy, 0, 0)
   }
+
+  /**
+   * Translate current matrix accumulative.
+   * @param {number} tx - translation for x
+   * @param {number} ty - translation for y
+   * @return {Matrix}
+   */
+  translate (tx, ty) {
+    return this.transform(1, 0, 0, 1, tx, ty)
+  }
 }
