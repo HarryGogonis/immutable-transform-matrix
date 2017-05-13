@@ -92,4 +92,14 @@ export default class Matrix extends Map {
   translate (tx, ty) {
     return this.transform(1, 0, 0, 1, tx, ty)
   }
+
+  /**
+   * Rotates current matrix accumulative by angle.
+   * @param {number} angle - angle in radians
+   */
+  rotate (angle) {
+    var cos = Math.cos(angle)
+    var sin = Math.sin(angle)
+    return this.transform(cos, sin, -sin, cos, 0, 0)
+  }
 }
