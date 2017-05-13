@@ -11,14 +11,14 @@ export default class Matrix extends Map {
   /**
    * Construct a Matrix. Creates an Identiy matrix if no params are supplied.
    * @param {number} a
-   * @param {number}
+   * @param {number} b
    * @param {number} c
    * @param {number} d
    * @param {number} e
    * @param {number} f
    */
   constructor (...args) {
-    if (args > 0) {
+    if (args.length > 0) {
       super({
         a: args[0],
         b: args[1],
