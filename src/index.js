@@ -102,4 +102,12 @@ export default class Matrix extends Map {
     var sin = Math.sin(angle)
     return this.transform(cos, sin, -sin, cos, 0, 0)
   }
+
+  /**
+   * Helper method to make a rotation based on an angle in degrees.
+   * @param {number} angle - angle in degrees
+   */
+  rotateDeg (angle) {
+    return this.rotate(angle * Math.PI / 180)
+  }
 }
