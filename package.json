@@ -1,6 +1,6 @@
 {
   "name": "immutable-matrices",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "description": "A matrix library using ImmutableJS data structutes",
   "keywords": [
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/deiucanta/npm-starter.git"
+    "url": "https://github.com/HarryGogonis/immutable-transform-matrix"
   },
   "main": "index.js",
   "scripts": {
