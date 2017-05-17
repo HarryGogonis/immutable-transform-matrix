@@ -1,3 +1,5 @@
+![build status](https://travis-ci.org/HarryGogonis/immutable-transform-matrix.svg?branch=master)
+
 # immutable-transform-matrix
 
 A library for creating affine transform matrix (3x3) that are Immutable.
