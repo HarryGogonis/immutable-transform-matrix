@@ -106,6 +106,7 @@ class Matrix extends Map {
   /**
    * Rotates current matrix accumulative by angle.
    * @param {number} angle - angle in radians
+   * @return {Matrix}
    */
   rotate (angle) {
     var cos = Math.cos(angle)
@@ -116,9 +117,26 @@ class Matrix extends Map {
   /**
    * Helper method to make a rotation based on an angle in degrees.
    * @param {number} angle - angle in degrees
+   * @return {Matrix}
    */
   rotateDeg (angle) {
     return this.rotate(angle * Math.PI / 180)
+  }
+
+  /**
+   * Multiplies current matrix with an other matrix.
+   * @param {Matrix} m - the other matrix
+   * @return {Matrix}
+   */
+  multiply (matrix) {
+    return this.transform(
+      matrix.get('a'),
+      matrix.get('b'),
+      matrix.get('c'),
+      matrix.get('d'),
+      matrix.get('e'),
+      matrix.get('f')
+    )
   }
 }
 

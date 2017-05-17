@@ -83,3 +83,15 @@ describe('rotateDeg', () => {
     expect(matrix.get('f')).to.be.equal(6)
   })
 })
+
+describe('multiply', () => {
+  it('should multiply the Matrix', () => {
+    const matrix = mockMatrix.multiply(mockMatrix)
+    expect(matrix.get('a')).to.be.equal(7)
+    expect(matrix.get('b')).to.be.equal(10)
+    expect(matrix.get('c')).to.be.equal(15)
+    expect(matrix.get('d')).to.be.equal(22)
+    expect(matrix.get('e')).to.be.equal(28)
+    expect(matrix.get('f')).to.be.equal(40)
+  })
+})
