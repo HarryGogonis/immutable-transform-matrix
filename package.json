@@ -23,7 +23,7 @@
     "test": "mocha tests --compilers js:babel-register",
     "test:dev": "npm run test -- --watch",
     "prepublish": "npm run clean & npm run build",
-    "docs": "jsdoc2md src/index.js > README.md"
+    "docs": "jsdoc2md src/index.js > docs/README.md"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
