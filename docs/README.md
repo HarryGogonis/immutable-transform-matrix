@@ -19,8 +19,9 @@ const m2 = m1.translate(10, 20)
             * [.transform(a2, b2, c2, d2, e2, f2)](#module_immutable-transform-matrix..Matrix+transform) ⇒ <code>Matrix</code>
             * [.scale(sx, [sy])](#module_immutable-transform-matrix..Matrix+scale) ⇒ <code>Matrix</code>
             * [.translate(tx, ty)](#module_immutable-transform-matrix..Matrix+translate) ⇒ <code>Matrix</code>
-            * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate)
-            * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg)
+            * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate) ⇒ <code>Matrix</code>
+            * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg) ⇒ <code>Matrix</code>
+            * [.multiply(m)](#module_immutable-transform-matrix..Matrix+multiply) ⇒ <code>Matrix</code>
         * _static_
             * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
                 * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -36,8 +37,9 @@ const m2 = m1.translate(10, 20)
         * [.transform(a2, b2, c2, d2, e2, f2)](#module_immutable-transform-matrix..Matrix+transform) ⇒ <code>Matrix</code>
         * [.scale(sx, [sy])](#module_immutable-transform-matrix..Matrix+scale) ⇒ <code>Matrix</code>
         * [.translate(tx, ty)](#module_immutable-transform-matrix..Matrix+translate) ⇒ <code>Matrix</code>
-        * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate)
-        * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg)
+        * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate) ⇒ <code>Matrix</code>
+        * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg) ⇒ <code>Matrix</code>
+        * [.multiply(m)](#module_immutable-transform-matrix..Matrix+multiply) ⇒ <code>Matrix</code>
     * _static_
         * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
             * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -85,7 +87,7 @@ Translate current matrix accumulative.
 
 <a name="module_immutable-transform-matrix..Matrix+rotate"></a>
 
-#### matrix.rotate(angle)
+#### matrix.rotate(angle) ⇒ <code>Matrix</code>
 Rotates current matrix accumulative by angle.
 
 **Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
@@ -96,7 +98,7 @@ Rotates current matrix accumulative by angle.
 
 <a name="module_immutable-transform-matrix..Matrix+rotateDeg"></a>
 
-#### matrix.rotateDeg(angle)
+#### matrix.rotateDeg(angle) ⇒ <code>Matrix</code>
 Helper method to make a rotation based on an angle in degrees.
 
 **Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
@@ -104,6 +106,17 @@ Helper method to make a rotation based on an angle in degrees.
 | Param | Type | Description |
 | --- | --- | --- |
 | angle | <code>number</code> | angle in degrees |
+
+<a name="module_immutable-transform-matrix..Matrix+multiply"></a>
+
+#### matrix.multiply(m) ⇒ <code>Matrix</code>
+Multiplies current matrix with an other matrix.
+
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| m | <code>Matrix</code> | the other matrix |
 
 <a name="module_immutable-transform-matrix..Matrix.Matrix"></a>
 
