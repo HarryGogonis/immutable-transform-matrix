@@ -1,4 +1,5 @@
 ![build status](https://travis-ci.org/HarryGogonis/immutable-transform-matrix.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/HarryGogonis/immutable-transform-matrix/badge.svg?branch=master)](https://coveralls.io/github/HarryGogonis/immutable-transform-matrix?branch=master)
 
 # immutable-transform-matrix
 
