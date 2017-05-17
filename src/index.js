@@ -1,13 +1,23 @@
 import { Map } from 'extendable-immutable'
-/**
-Notes:
-- Is this a sparce matrix?
-*/
 
 /**
- * An immutable Matrix
+ * A library for creating affine transform matrix (3x3) that are Immutable.
+ * These matrices can be used for matrix calcuations on SVG CTMs (current transform matrix).
+ *
+ * @module immutable-transform-matrix
+ * @example
+ * import { Matrix } from 'immutable-transform-matrix'
+ * import { isImmutable } from 'immutable'
+ * const m1 = new Matrix()
+ * isImmutable(m1) // true
+ * const m2 = m1.translate(10, 20)
  */
-export default class Matrix extends Map {
+
+/**
+ * @class Matrix
+ * @extends Immutable.Map
+ */
+class Matrix extends Map {
   /**
    * Construct a Matrix. Creates an Identiy matrix if no params are supplied.
    * @param {number} a
@@ -111,3 +121,5 @@ export default class Matrix extends Map {
     return this.rotate(angle * Math.PI / 180)
   }
 }
+
+export default Matrix
