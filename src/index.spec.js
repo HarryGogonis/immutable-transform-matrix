@@ -1,10 +1,15 @@
 import Matrix from '../src/index.js'
-import { Map, isImmutable } from 'immutable'
+import { Map } from 'immutable'
 const { describe, it, expect } = global
 
 const mockMatrix = new Matrix(1, 2, 3, 4, 5, 6)
 
 describe('constructor', () => {
+  it('should extend an Immutable Map', () => {
+    const matrix = mockMatrix
+    expect(matrix instanceof Map).toBe(true)
+  })
+
   it('should create an identity Matrix', () => {
     const matrix = new Matrix()
     expect(matrix.get('a')).toBe(1)
@@ -23,12 +28,6 @@ describe('constructor', () => {
     expect(matrix.get('d')).toBe(4)
     expect(matrix.get('e')).toBe(5)
     expect(matrix.get('f')).toBe(6)
-  })
-
-  it('should implement Immutable', () => {
-    const matrix = mockMatrix
-    expect(isImmutable(matrix)).toBe(true)
-    console.log(matrix instanceof Map)
   })
 })
 
