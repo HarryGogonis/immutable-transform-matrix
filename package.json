@@ -1,14 +1,13 @@
 {
   "name": "immutable-transform-matrix",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "description": "A matrix library using ImmutableJS data structutes",
   "keywords": [
-    "starter",
-    "boilerplate",
-    "es2015",
-    "babel",
-    "airbnb"
+    "matrix",
+    "svg",
+    "immutable",
+    "ctm"
   ],
   "repository": {
     "type": "git",
