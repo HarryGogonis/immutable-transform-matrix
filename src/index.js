@@ -138,6 +138,21 @@ class Matrix extends Map {
       matrix.get('f')
     )
   }
+
+  /**
+   * @return {string}
+   */
+  toString () {
+    const values = [
+      this.get('a'),
+      this.get('b'),
+      this.get('c'),
+      this.get('d'),
+      this.get('e'),
+      this.get('f')
+    ]
+    return `matrix(${values.join()})`
+  }
 }
 
 export default Matrix

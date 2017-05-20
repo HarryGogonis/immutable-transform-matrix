@@ -100,3 +100,13 @@ describe('multiply', () => {
     expect(matrix.get('f')).toBe(40)
   })
 })
+
+describe('toString', () => {
+  it('should return a matrix string', () => {
+    let str = mockMatrix.toString()
+    expect(str).toBe('matrix(1,2,3,4,5,6)')
+
+    str = new Matrix(6, 5, 4, 3, 2, 1).toString()
+    expect(str).toBe('matrix(6,5,4,3,2,1)')
+  })
+})
