@@ -1,6 +1,6 @@
 {
   "name": "immutable-transform-matrix",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "description": "A matrix library using ImmutableJS data structutes",
   "keywords": [
