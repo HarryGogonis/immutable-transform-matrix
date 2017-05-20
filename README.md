@@ -7,6 +7,8 @@
 A library for creating affine transform matrix (3x3) that are Immutable.
 These matrices can be used for matrix calcuations on SVG CTMs (current transform matrix).
 
+## [API Documentation](docs/)
+
 ## Install
 
 ```sh
@@ -22,5 +24,3 @@ const m1 = new Matrix()
 isImmutable(m1) // true
 const m2 = m1.translate(10, 20)
 ```
-
-## [API Documentation](docs/)
