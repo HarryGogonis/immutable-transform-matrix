@@ -5,12 +5,6 @@ import { Map } from 'extendable-immutable'
  * These matrices can be used for matrix calcuations on SVG CTMs (current transform matrix).
  *
  * @module immutable-transform-matrix
- * @example
- * import { Matrix } from 'immutable-transform-matrix'
- * import { isImmutable } from 'immutable'
- * const m1 = new Matrix()
- * isImmutable(m1) // true
- * const m2 = m1.translate(10, 20)
  */
 
 /**
