@@ -4,14 +4,13 @@
 
 # immutable-transform-matrix
 
-A library for creating affine transform matrix (3x3) that extend an Immutable [Map](https://facebook.github.io/immutable-js/docs/#/Map).
+A library for creating affine transform matrix (3x3) that extend an [Immutable Map](https://facebook.github.io/immutable-js/docs/#/Map).
+
 These matrices can be used for matrix calcuations on SVG CTMs (current transform matrix).
 
 Inspired by [transformation-matrix-js](https://www.npmjs.com/package/transformation-matrix-js)
 
 ## [API Documentation](docs/)
-
-Extends a [Map](https://facebook.github.io/immutable-js/docs/#/Map) so
 
 ## Install
 
