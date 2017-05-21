@@ -4,14 +4,6 @@
 A library for creating affine transform matrix (3x3) that are Immutable.
 These matrices can be used for matrix calcuations on SVG CTMs (current transform matrix).
 
-**Example**  
-```js
-import { Matrix } from 'immutable-transform-matrix'
-import { isImmutable } from 'immutable'
-const m1 = new Matrix()
-isImmutable(m1) // true
-const m2 = m1.translate(10, 20)
-```
 
 * [immutable-transform-matrix](#module_immutable-transform-matrix)
     * [~Matrix](#module_immutable-transform-matrix..Matrix) ⇐ <code>Immutable.Map</code>
@@ -22,6 +14,7 @@ const m2 = m1.translate(10, 20)
             * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate) ⇒ <code>Matrix</code>
             * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg) ⇒ <code>Matrix</code>
             * [.multiply(m)](#module_immutable-transform-matrix..Matrix+multiply) ⇒ <code>Matrix</code>
+            * [.toString()](#module_immutable-transform-matrix..Matrix+toString) ⇒ <code>string</code>
         * _static_
             * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
                 * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -40,6 +33,7 @@ const m2 = m1.translate(10, 20)
         * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate) ⇒ <code>Matrix</code>
         * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg) ⇒ <code>Matrix</code>
         * [.multiply(m)](#module_immutable-transform-matrix..Matrix+multiply) ⇒ <code>Matrix</code>
+        * [.toString()](#module_immutable-transform-matrix..Matrix+toString) ⇒ <code>string</code>
     * _static_
         * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
             * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -118,6 +112,10 @@ Multiplies current matrix with an other matrix.
 | --- | --- | --- |
 | m | <code>Matrix</code> | the other matrix |
 
+<a name="module_immutable-transform-matrix..Matrix+toString"></a>
+
+#### matrix.toString() ⇒ <code>string</code>
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
 <a name="module_immutable-transform-matrix..Matrix.Matrix"></a>
 
 #### Matrix.Matrix
