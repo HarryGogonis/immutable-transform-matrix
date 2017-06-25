@@ -115,3 +115,9 @@ describe('toString', () => {
     expect(str).toBe('matrix(6,5,4,3,2,1)')
   })
 })
+
+describe('determinant', () => {
+  expect(mockMatrix.determinant()).toBe(-2)
+  expect(new Matrix().determinant()).toBe(1)
+  expect(new Matrix(1, 1, 1, 1, 0, 0).determinant()).toBe(0)
+})

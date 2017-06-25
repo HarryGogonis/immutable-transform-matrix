@@ -159,6 +159,13 @@ class Matrix extends Map {
     ]
     return `matrix(${values.join()})`
   }
+
+  /**
+   * @return {number} determinant of the current matrix
+   */
+  determinant () {
+    return (this.get('a') * this.get('d')) - (this.get('b') * this.get('c'))
+  }
 }
 
 export default Matrix
