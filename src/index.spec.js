@@ -101,6 +101,11 @@ describe('multiply', () => {
   })
 })
 
+describe('isIdentity', () => {
+  expect(mockMatrix.isIdentity()).toBe(false)
+  expect(new Matrix().isIdentity()).toBe(true)
+})
+
 describe('toString', () => {
   it('should return a matrix string', () => {
     let str = mockMatrix.toString()
