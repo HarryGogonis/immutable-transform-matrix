@@ -166,6 +166,44 @@ class Matrix extends Map {
   determinant () {
     return (this.get('a') * this.get('d')) - (this.get('b') * this.get('c'))
   }
+
+  /**
+   * @return {boolean} true if matrix is invertible
+   */
+  isInvertible () {
+    return this.determinant() !== 0
+  }
+
+  /**
+   * @return {Matrix} inverse of the current matrix.
+   * @throws Will throw an error if the matrix is not invertable
+   */
+  inverse () {
+    if (this.isIdentity()) {
+      return new Matrix()
+    }
+
+    if (!this.isInvertible()) {
+      throw new Error('Matrix is not invertible.')
+    }
+
+    const dt = this.determinant()
+    const a = this.get('a')
+    const b = this.get('b')
+    const c = this.get('c')
+    const d = this.get('d')
+    const e = this.get('e')
+    const f = this.get('f')
+
+    return this.withMutations(matrix => matrix
+      .set('a', d / dt)
+      .set('b', -b / dt)
+      .set('c', -c / dt)
+      .set('d', a / dt)
+      .set('e', ((c * f) - (d * e)) / dt)
+      .set('f', -((a * f) - (b * e)) / dt)
+    )
+  }
 }
 
 export default Matrix

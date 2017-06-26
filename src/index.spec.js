@@ -121,3 +121,19 @@ describe('determinant', () => {
   expect(new Matrix().determinant()).toBe(1)
   expect(new Matrix(1, 1, 1, 1, 0, 0).determinant()).toBe(0)
 })
+
+describe('isInvertable', () => {
+  expect(mockMatrix.isInvertible()).toBe(true)
+  expect(new Matrix().isInvertible()).toBe(true)
+  expect(new Matrix(1, 1, 1, 1, 0, 0).isInvertible()).toBe(false)
+})
+
+describe('inverse', () => {
+  const mockMatrixInverted = new Matrix(-2, 1, 1.5, -0.5, 1, -2)
+
+  expect(mockMatrix.inverse().equals(mockMatrixInverted)).toBe(true)
+  expect(new Matrix().inverse().equals(new Matrix())).toBe(true)
+  expect(() => {
+    new Matrix(1, 1, 1, 1, 0, 0).inverse()
+  }).toThrow()
+})
