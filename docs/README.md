@@ -14,7 +14,11 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
             * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate) ⇒ <code>Matrix</code>
             * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg) ⇒ <code>Matrix</code>
             * [.multiply(m)](#module_immutable-transform-matrix..Matrix+multiply) ⇒ <code>Matrix</code>
+            * [.isIdentity()](#module_immutable-transform-matrix..Matrix+isIdentity) ⇒ <code>boolean</code>
             * [.toString()](#module_immutable-transform-matrix..Matrix+toString) ⇒ <code>string</code>
+            * [.determinant()](#module_immutable-transform-matrix..Matrix+determinant) ⇒ <code>number</code>
+            * [.isInvertible()](#module_immutable-transform-matrix..Matrix+isInvertible) ⇒ <code>boolean</code>
+            * [.inverse()](#module_immutable-transform-matrix..Matrix+inverse) ⇒ <code>Matrix</code>
         * _static_
             * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
                 * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -33,7 +37,11 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
         * [.rotate(angle)](#module_immutable-transform-matrix..Matrix+rotate) ⇒ <code>Matrix</code>
         * [.rotateDeg(angle)](#module_immutable-transform-matrix..Matrix+rotateDeg) ⇒ <code>Matrix</code>
         * [.multiply(m)](#module_immutable-transform-matrix..Matrix+multiply) ⇒ <code>Matrix</code>
+        * [.isIdentity()](#module_immutable-transform-matrix..Matrix+isIdentity) ⇒ <code>boolean</code>
         * [.toString()](#module_immutable-transform-matrix..Matrix+toString) ⇒ <code>string</code>
+        * [.determinant()](#module_immutable-transform-matrix..Matrix+determinant) ⇒ <code>number</code>
+        * [.isInvertible()](#module_immutable-transform-matrix..Matrix+isInvertible) ⇒ <code>boolean</code>
+        * [.inverse()](#module_immutable-transform-matrix..Matrix+inverse) ⇒ <code>Matrix</code>
     * _static_
         * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
             * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -112,10 +120,34 @@ Multiplies current matrix with an other matrix.
 | --- | --- | --- |
 | m | <code>Matrix</code> | the other matrix |
 
+<a name="module_immutable-transform-matrix..Matrix+isIdentity"></a>
+
+#### matrix.isIdentity() ⇒ <code>boolean</code>
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+**Returns**: <code>boolean</code> - true if identity (no transforms applied)  
 <a name="module_immutable-transform-matrix..Matrix+toString"></a>
 
 #### matrix.toString() ⇒ <code>string</code>
 **Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+<a name="module_immutable-transform-matrix..Matrix+determinant"></a>
+
+#### matrix.determinant() ⇒ <code>number</code>
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+**Returns**: <code>number</code> - determinant of the current matrix  
+<a name="module_immutable-transform-matrix..Matrix+isInvertible"></a>
+
+#### matrix.isInvertible() ⇒ <code>boolean</code>
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+**Returns**: <code>boolean</code> - true if matrix is invertible  
+<a name="module_immutable-transform-matrix..Matrix+inverse"></a>
+
+#### matrix.inverse() ⇒ <code>Matrix</code>
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+**Returns**: <code>Matrix</code> - inverse of the current matrix.  
+**Throws**:
+
+- Will throw an error if the matrix is not invertable
+
 <a name="module_immutable-transform-matrix..Matrix.Matrix"></a>
 
 #### Matrix.Matrix
