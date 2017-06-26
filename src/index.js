@@ -137,12 +137,12 @@ class Matrix extends Map {
    * @return {boolean} true if identity (no transforms applied)
    */
   isIdentity () {
-    return this.get('a') === 1
-      && this.get('b') === 0
-      && this.get('c') === 0
-      && this.get('d') === 1
-      && this.get('e') === 0
-      && this.get('f') === 0
+    return this.get('a') === 1 &&
+      this.get('b') === 0 &&
+      this.get('c') === 0 &&
+      this.get('d') === 1 &&
+      this.get('e') === 0 &&
+      this.get('f') === 0
   }
 
   /**
