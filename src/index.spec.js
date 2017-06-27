@@ -137,3 +137,27 @@ describe('inverse', () => {
     new Matrix(1, 1, 1, 1, 0, 0).inverse()
   }).toThrow()
 })
+
+describe('divide', () => {
+  it('should divide the matrix', () => {
+    const test1 = mockMatrix
+      .divide(mockMatrix)
+      .isIdentity()
+    expect(test1).toBe(true)
+
+    const test2 = mockMatrix
+        .divide(new Matrix())
+        .equals(mockMatrix)
+    expect(test2).toBe(true)
+  })
+
+  it('should throw an Error', () => {
+    expect(() => {
+      mockMatrix.divide(5)
+    }).toThrow()
+
+    expect(() => {
+      mockMatrix.divide(new Matrix(1, 1, 1, 1, 0, 0))
+    }).toThrow()
+  })
+})

@@ -204,6 +204,31 @@ class Matrix extends Map {
       .set('f', -((a * f) - (b * e)) / dt)
     )
   }
+
+  /**
+   * @param {Matrix} m - matrix divisor
+   * @return {Matrix}
+   * @throws Will throw if m is not invertible or not a Matrix
+   */
+  divide (m) {
+    if (!(m instanceof Matrix)) {
+      throw new Error('Must pass a Matrix to divide.')
+    }
+
+    if (!m.isInvertible()) {
+      throw new Error('Input matrix is not invertible.')
+    }
+
+    const inverse = m.inverse()
+    return this.transform(
+      inverse.get('a'),
+      inverse.get('b'),
+      inverse.get('c'),
+      inverse.get('d'),
+      inverse.get('e'),
+      inverse.get('f')
+    )
+  }
 }
 
 export default Matrix

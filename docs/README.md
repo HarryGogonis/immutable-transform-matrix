@@ -19,6 +19,7 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
             * [.determinant()](#module_immutable-transform-matrix..Matrix+determinant) ⇒ <code>number</code>
             * [.isInvertible()](#module_immutable-transform-matrix..Matrix+isInvertible) ⇒ <code>boolean</code>
             * [.inverse()](#module_immutable-transform-matrix..Matrix+inverse) ⇒ <code>Matrix</code>
+            * [.divide(m)](#module_immutable-transform-matrix..Matrix+divide) ⇒ <code>Matrix</code>
         * _static_
             * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
                 * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -42,6 +43,7 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
         * [.determinant()](#module_immutable-transform-matrix..Matrix+determinant) ⇒ <code>number</code>
         * [.isInvertible()](#module_immutable-transform-matrix..Matrix+isInvertible) ⇒ <code>boolean</code>
         * [.inverse()](#module_immutable-transform-matrix..Matrix+inverse) ⇒ <code>Matrix</code>
+        * [.divide(m)](#module_immutable-transform-matrix..Matrix+divide) ⇒ <code>Matrix</code>
     * _static_
         * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
             * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -147,6 +149,19 @@ Multiplies current matrix with an other matrix.
 **Throws**:
 
 - Will throw an error if the matrix is not invertable
+
+<a name="module_immutable-transform-matrix..Matrix+divide"></a>
+
+#### matrix.divide(m) ⇒ <code>Matrix</code>
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+**Throws**:
+
+- Will throw if m is not invertible or not a Matrix
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| m | <code>Matrix</code> | matrix divisor |
 
 <a name="module_immutable-transform-matrix..Matrix.Matrix"></a>
 
