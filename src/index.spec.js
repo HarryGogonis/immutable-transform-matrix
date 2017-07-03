@@ -161,3 +161,11 @@ describe('divide', () => {
     }).toThrow()
   })
 })
+
+describe('#applyToPoint', () => {
+  it('should compute the dot product and return a plain object', () => {
+    const x = 5
+    const y = 6
+    expect(new Matrix().applyToPoint(x, y)).toEqual({x, y})
+  })
+})

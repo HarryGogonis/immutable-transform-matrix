@@ -20,7 +20,7 @@
     "lint": "standard src/*.js",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "test:dev": "npm run test -- --watch",
+    "test:dev": "jest --watch",
     "prepublish": "npm run clean & npm run build",
     "docs": "jsdoc2md src/index.js > docs/README.md",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"

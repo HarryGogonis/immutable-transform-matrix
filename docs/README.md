@@ -20,6 +20,7 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
             * [.isInvertible()](#module_immutable-transform-matrix..Matrix+isInvertible) ⇒ <code>boolean</code>
             * [.inverse()](#module_immutable-transform-matrix..Matrix+inverse) ⇒ <code>Matrix</code>
             * [.divide(m)](#module_immutable-transform-matrix..Matrix+divide) ⇒ <code>Matrix</code>
+            * [.applyToPoint(x, y)](#module_immutable-transform-matrix..Matrix+applyToPoint) ⇒ <code>Object</code>
         * _static_
             * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
                 * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -44,6 +45,7 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
         * [.isInvertible()](#module_immutable-transform-matrix..Matrix+isInvertible) ⇒ <code>boolean</code>
         * [.inverse()](#module_immutable-transform-matrix..Matrix+inverse) ⇒ <code>Matrix</code>
         * [.divide(m)](#module_immutable-transform-matrix..Matrix+divide) ⇒ <code>Matrix</code>
+        * [.applyToPoint(x, y)](#module_immutable-transform-matrix..Matrix+applyToPoint) ⇒ <code>Object</code>
     * _static_
         * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
             * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
@@ -162,6 +164,19 @@ Multiplies current matrix with an other matrix.
 | Param | Type | Description |
 | --- | --- | --- |
 | m | <code>Matrix</code> | matrix divisor |
+
+<a name="module_immutable-transform-matrix..Matrix+applyToPoint"></a>
+
+#### matrix.applyToPoint(x, y) ⇒ <code>Object</code>
+Apply current matrix to x and y point.
+
+**Kind**: instance method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+**Returns**: <code>Object</code> - A new transformed point object  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| x | <code>number</code> | value for x |
+| y | <code>number</code> | value for y |
 
 <a name="module_immutable-transform-matrix..Matrix.Matrix"></a>
 
