@@ -229,6 +229,20 @@ class Matrix extends Map {
       inverse.get('f')
     )
   }
+
+  /**
+   * Apply current matrix to x and y point.
+   *
+   * @param {number} x - value for x
+   * @param {number} y - value for y
+   * @returns {{x: number, y: number}} A new transformed point object
+   */
+  applyToPoint (x, y) {
+    return {
+      x: (x * this.get('a')) + (y * this.get('c')) + this.get('e'),
+      y: (x * this.get('b')) + (y * this.get('d')) + this.get('f')
+    }
+  }
 }
 
 export default Matrix
