@@ -24,6 +24,7 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
         * _static_
             * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
                 * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
+            * [.fromCTM(ctm)](#module_immutable-transform-matrix..Matrix.fromCTM) ⇒ <code>Matrix</code>
 
 <a name="module_immutable-transform-matrix..Matrix"></a>
 
@@ -49,6 +50,7 @@ These matrices can be used for matrix calcuations on SVG CTMs (current transform
     * _static_
         * [.Matrix](#module_immutable-transform-matrix..Matrix.Matrix)
             * [new Matrix(a, b, c, d, e, f)](#new_module_immutable-transform-matrix..Matrix.Matrix_new)
+        * [.fromCTM(ctm)](#module_immutable-transform-matrix..Matrix.fromCTM) ⇒ <code>Matrix</code>
 
 <a name="module_immutable-transform-matrix..Matrix+transform"></a>
 
@@ -196,4 +198,15 @@ Construct a Matrix. Creates an Identiy matrix if no params are supplied.
 | d | <code>number</code> | 
 | e | <code>number</code> | 
 | f | <code>number</code> | 
+
+<a name="module_immutable-transform-matrix..Matrix.fromCTM"></a>
+
+#### Matrix.fromCTM(ctm) ⇒ <code>Matrix</code>
+Construct a new Matrix constructed from an SVGMatrix
+
+**Kind**: static method of [<code>Matrix</code>](#module_immutable-transform-matrix..Matrix)  
+
+| Param | Type |
+| --- | --- |
+| ctm | <code>SVGMatrix</code> | 
 

@@ -169,3 +169,18 @@ describe('#applyToPoint', () => {
     expect(new Matrix().applyToPoint(x, y)).toEqual({x, y})
   })
 })
+
+describe('fromCTM', () => {
+  it('should return a new Matrix', () => {
+    const actual = Matrix.fromCTM({
+      a: 1,
+      b: 2,
+      c: 3,
+      d: 4,
+      e: 5,
+      f: 6
+    })
+    const expected = new Matrix(1, 2, 3, 4, 5, 6)
+    expect(actual).toEqual(expected)
+  })
+})
