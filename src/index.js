@@ -44,6 +44,16 @@ class Matrix extends Map {
   }
 
   /**
+   * Construct a new Matrix constructed from an SVGMatrix
+   * @param {SVGMatrix} ctm
+   * @return {Matrix}
+   */
+  static fromCTM (ctm) {
+    const {a, b, c, d, e, f} = ctm
+    return new Matrix(a, b, c, d, e, f)
+  }
+
+  /**
    * Multiplies current matrix with new matrix values.
    * @param {number} a2 - scale x
    * @param {number} b2 - shear y
